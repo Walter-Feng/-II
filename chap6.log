@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6630 64-bit) (preloaded format=xelatex 2018.4.5)  18 NOV 2018 19:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6630 64-bit) (preloaded format=xelatex 2018.4.5)  18 NOV 2018 19:54
 entering extended mode
 **F:/GitHub/中化II/chap6.tex
 (F:/GitHub/中化II/chap6.tex
@@ -2245,6 +2245,26 @@ File: figures/batterytemp.eps Graphic file (type eps)
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 295.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
+\TU/lmr/m/n/10 it can be interpreted that for the cell
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
+\TU/lmr/m/n/10 Hg|$[][][][][][]$,KCl(Sat.)||KCl(0.09 M),AgCl|Ag there
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 333--335
+\TU/lmr/m/n/10 However, the line is too far from the data point
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 333--335
+\TU/lmr/m/n/10 of 25 $[] []$, indicating the indifference of calculating
+ []
 
 (chap6.bbl) [2] (chap6.aux) ) 
 Here is how much of TeX's memory you used:
