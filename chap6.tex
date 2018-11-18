@@ -116,7 +116,8 @@ language=Mathematica,
 \usepackage{fancybox}   
 
 
-
+\usepackage{tikz}
+\usepackage{circuitikz}
 
 
 
@@ -202,7 +203,7 @@ W_{\text{non-}pV} \leq  - \Delta G,
 \end{equation}
 and for a process involving electron transfer, electric work dominates the non-volume work. Faraday pointed out its linearity towards the amount of electrons transferred, as is natural in electric circuits,
 \begin{equation}
-W_{\text{non-}pV,\text{max}} = - \Delta = nFE
+W_{\text{non-}pV,\text{max}} = - \Delta G　= nFE
 \end{equation}
 where $n$ is the total amounts of electrons transferred, $F$ the Faraday constant representing electric charges of 1 mol electrons, and $E$ represents the electric potential in the circuit provided by the reaction. Thus it is evident that Any reaction that involves electron transfer and a decrease in Gibbs free energy can be applied as an electric power source.
 
@@ -221,9 +222,130 @@ According to Kirchhoff's circuit laws, the current will cause an decrease in the
 \section{Methods and procedures}
 A series of standard solution of \ce{KCl} and standard solution of \ce{AgNO3} in different concentrations was prepared respectively. Each battery consists of a pair from four electrodes - saturated calomel electrode in saturated KCl solution, silver chloride electrode in different concentration of \ce{KCl} solution, silver electrode in different concetration of \ce{AgNO3} solution - is measured using Model UJ-25 high voltage DC potentiometer. The electrric potential of battery that consists of saturated calomel electrode in saturated KCl solution and silver chloride electrode in 0.0900 M of KCl solution is measured at different temperatures. 
 
-\section{}
+\section{Result and analysis}
+
+\begin{table}
+\centering
+\caption{The potential of the cells of different electrodes measured at 25 \celsius using potassium nitrate as the salt bridge}
+\begin{tabular}{c|ccccc}\hline
+Group & \multicolumn{5}{c}{$c$/M} \\\hline
+A &  0.1116 & 0.0832 & 0.06929 & 0.06041 & 0.05454 \\
+B &   0.4373 & 0.4627 & 0.4722 & 0.4833 & 0.4917 \\
+C &  0.2086 & 0.3835 & 0.4080 & 0.4288 & 0.4339 \\
+D &  0.05658 & 0.03192 & 0.01917 & 0.01133 & 0.005567 \\\hline
+\end{tabular}
+
+\begin{flushleft}
+A:Hg|\ce{Hg2Cl2},KCl(Sat.)||KCl($c$),AgCl|Ag
+
+B:Hg|\ce{Hg2Cl2},KCl(Sat.)||\ce{AgNO3}($c$)|Ag
+
+C:Ag|AgCl,KCl($c$)||\ce{AgNO3}($c$)|Ag
+
+D:Ag|\ce{AgNO3}($c$)||\ce{AgNO3}(0.100 M)|Ag
+\end{flushleft}
+\label{table}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption{The potential of Hg|\ce{Hg2Cl2},KCl(Sat.)||KCl(0.09 M),AgCl|Ag measured at different temperatures using potassium nitrate as the salt bridge}
+\begin{tabular}{c|ccccc}\hline
+T/K & 298.15 & 303.15 & 308.15 & 313.15 & 318.15  \\\hline
+E/V & 0.054537 & 0.055457 & 0.055823 & 0.055947 & 0.056093 \\\hline
+\end{tabular}
+\label{table2}
+\end{table}
+
+
+\begin{figure}
+\centering
+\subfigure[A]{
+	\includegraphics[width=0.22\textwidth]{figures/electropotential1.eps}
+}
+\subfigure[B]{
+	\includegraphics[width=0.22\textwidth]{figures/electropotential2.eps}
+}
+\subfigure[C]{
+	\includegraphics[width=0.22\textwidth]{figures/electropotential3.eps}
+}
+\subfigure[D]{
+	\includegraphics[width=0.22\textwidth]{figures/electropotential4.eps}
+}
+\caption{The $E$-$\ln{c}$ curve of the cells of different electrodes measured at 25 \celsius~using potassium nitrate as the salt bridge}
+\label{figure}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{figures/batterytemp.eps}
+\caption{The E-$T$ plot of the potential of saturated calomel electrode combined with silver chloride electrode in 0.09 M KCl measured at different temperatures using potassium nitrate as the salt bridge}
+\label{batterytemp}
+\end{figure}
+
+The data is shown in Table.\ref{table},\ref{table2}, with figures shown in Fig.\ref{figure},\ref{batterytemp}. Relatively nice linearity is obtained in Fig.\ref{figure}, where the lines are interpreted as
+\begin{equation}
+\begin{cases}
+E_A = -0.00880485 - 0.0261599 \ln{c} \\
+E_B = 0.547491 + 0.024127 \ln{c} \\
+E_C = 0.552076 + 0.0478942 \ln{c} \\
+E_D = -0.0504885 - 0.0233089 \ln{c}
+\end{cases}
+\end{equation}
+with
+\begin{equation}
+\begin{cases}
+R^2_A = 0.999794 \\
+R^2_B = 0.991412 \\
+R^2_C = 0.984017 \\
+R^2_D = 0.999645
+\end{cases}
+\end{equation}
+if excluding the error point in the C group. Substituting $c$ with 1, it is easily obtained that
+\begin{equation}
+\begin{cases}
+E^\ominus_\text{AgCl/Ag} = -0.008805 \, \mathrm{V} \\
+E^\ominus_\text{\ce{Ag+}/Ag} = 0.5475 \, \mathrm{V} 
+\end{cases}
+\end{equation}
+in the reference to saturated calomel electrode. Subtracting them gives 0.5563 V, which is identical to the result from the C group (0.5521 V). The slopes deviate slightly from $RT/nF$, namely 0.02569, which might be attributed to limited conductance of the ions in the solution that influences the measurement, and inevitable consumation of the reactant during the measurement. It also gives
+\begin{equation}
+K^\ominus(\text{AgCl}) = \exp{\frac{-nFE}{RT}} = 2.535 \times 10^{-9}
+\end{equation}
+which also differs from the standard data($1.8\times 10^{-10}$), which owes itself to the non-one fugacity coefficient of the ions in the solution. 
+
+It fails to give linearity in Fig.\ref{batterytemp}, which might be due to non-zero gradient of temperature over the system, especially in the salt bridge, which is outside the thermostat. It affects the fugacity of the ions as well as producing flows of the solution, which is certain to cause unpredictable errors. Picking the last three data points to fit a straight line returns
+\begin{equation}
+E = 0.0474993 + 0.000027 T
+\end{equation}
+
+
+
+
 
 
 
 
 \end{document}
+
+\begin{figure}
+\centering
+\begin{circuitikz} 
+ \draw (0,0) node[spdt,xscale=1,yscale=-1,anchor=in](Swp){SW};
+ \draw (Swp.out 1) node[anchor=west] to [battery1]{$E_n$}(-4,0)
+ 	to [short] (-4,12);
+ \draw (Swp.in) 
+ 	to [nos]{K} (0,5)
+ 	to [ammeter] (0,10)
+ 	to [vR]{R_n} (-4,10);
+ \draw (4,12) 
+ 	to [vR]{$R_p$} (0,12)
+ 	to [battery1]{$E_w$} (-4,12);
+ \draw (0,10) 
+ 	to[american potentiometer,n=pot]{R_x} (4,10)
+ 	to[short] (4,12);
+\draw (pot.wiper) to (4,0);
+\draw (4,0) to (Swp out 2) node[anchor=east];
+\end{circuitikz}
+\end{figure}
