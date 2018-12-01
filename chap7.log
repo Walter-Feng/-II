@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  18 NOV 2018 22:25
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  26 NOV 2018 09:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**chap6.tex
-(./chap6.tex
+**chap7.tex
+(./chap7.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/revtex4-1.cls
@@ -1817,8 +1817,8 @@ Class revtex4-1 Info: multicol was not loaded (OK!) on input line 144.
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-(./chap6.aux)
-\openout1 = `chap6.aux'.
+(./chap7.aux)
+\openout1 = `chap7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
@@ -1914,11 +1914,11 @@ ABD: EveryShipout initializing macros
 . Activating mapping `fontspec' on line 144.
 .................................................
 \c@lstlisting=\count325
-\openout3 = `chap6Notes.bib'.
+\openout3 = `chap7Notes.bib'.
 
- (./chap6.toc)
+ (./chap7.toc)
 \tf@toc=\write7
-\openout7 = `chap6.toc'.
+\openout7 = `chap7.toc'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 201.
 
@@ -1930,52 +1930,38 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 201.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
-File: figures/electropotential1.eps Graphic file (type eps)
+File: figures/Langmuir_Adsorption_Model.jpg Graphic file (type QTm)
 
-<figures/electropotential1.eps>
-File: figures/electropotential2.eps Graphic file (type eps)
- <figures/electropotential2.eps>
-File: figures/electropotential3.eps Graphic file (type eps)
+<use  "figures/Langmuir_Adsorption_Model.jpg" > [1]
+File: figures/powerfit.eps Graphic file (type eps)
+ <figures/powerfit.eps>
+File: figures/Logfit.eps Graphic file (type eps)
 
-<figures/electropotential3.eps>
-File: figures/electropotential4.eps Graphic file (type eps)
- <figures/electropotential4.eps>
-File: figures/batterytemp.eps Graphic file (type eps)
+<figures/Logfit.eps>
+File: figures/specialfit.eps Graphic file (type eps)
+ <figures/specialfit.eps>
+File: figures/Gibbs.eps Graphic file (type eps)
+ <figures/Gibbs.eps>
+File: figures/Langmuir.eps Graphic file (type eps)
 
-<figures/batterytemp.eps> [1]
+<figures/Langmuir.eps> [2]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 295.
+ on input line 331.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
-\TU/lmr/m/n/10 it can be interpreted that for the cell
+Overfull \hbox (19.32834pt too wide) detected at line 338
+[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
-\TU/lmr/m/n/10 Hg|$[][][][][][]$,KCl(Sat.)||KCl(0.09 M),AgCl|Ag there
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 335--337
-\TU/lmr/m/n/10 However, the line is too far from the data point
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 335--337
-\TU/lmr/m/n/10 of 25 $[] []$, indicating the indifference of calculating
- []
-
-(./chap6.bbl) [2] (./chap6.aux) ) 
+(./chap7.bbl) [3] (./chap7.aux) ) 
 Here is how much of TeX's memory you used:
- 41804 strings out of 493068
- 899113 string characters out of 6135636
- 1112615 words of memory out of 5000000
- 45224 multiletter control sequences out of 15000+600000
+ 41818 strings out of 493068
+ 899283 string characters out of 6135636
+ 1116655 words of memory out of 5000000
+ 45235 multiletter control sequences out of 15000+600000
  13286 words of font info for 67 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 62i,18n,67p,10433b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,67p,10433b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chap6.xdv (2 pages, 65228 bytes).
+Output written on chap7.xdv (3 pages, 69360 bytes).

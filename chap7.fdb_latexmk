@@ -1,16 +1,17 @@
 # Fdb version 3
-["bibtex chap6"] 1542551134 "chap6.aux" "chap6.bbl" "chap6" 1542551140
+["bibtex chap7"] 1543194476 "chap7.aux" "chap7.bbl" "chap7" 1543194481
   "/usr/local/texlive/2016/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst" 1284166002 71518 fec93f06df0c073f83d2330456bd19c2 ""
-  "chap6.aux" 1542551138 2396 f2b076921a305be0342e8e2dcaf4ff12 ""
-  "chap6Notes.bib" 1542551138 103 48ad29797468f16e2853d8797278d7af ""
+  "References.bib" 1543193328 4110 583a1db1072c802e3eb031a2c5dc611c ""
+  "chap7.aux" 1543194479 2636 9d6ae78b7453c493933be0320f34e8fb ""
+  "chap7Notes.bib" 1543194479 103 48ad29797468f16e2853d8797278d7af ""
   (generated)
-  "chap6.bbl"
-  "chap6.blg"
-["xdvipdfmx"] 1542551139 "chap6.xdv" "chap6.pdf" "chap6" 1542551140
-  "chap6.xdv" 1542551138 65228 deeda86f42062fc9e8b28a161d76001b "xelatex"
+  "chap7.bbl"
+  "chap7.blg"
+["xdvipdfmx"] 1543194479 "chap7.xdv" "chap7.pdf" "chap7" 1543194481
+  "chap7.xdv" 1543194479 69360 2f058f47689e2025e3aeac6ff085dfd4 "xelatex"
   (generated)
-  "chap6.pdf"
-["xelatex"] 1542551135 "chap6.tex" "chap6.xdv" "chap6" 1542551140
+  "chap7.pdf"
+["xelatex"] 1543194476 "chap7.tex" "chap7.xdv" "chap7" 1543194481
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -198,18 +199,19 @@
   "/usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf" 1491389445 32192 c18bc721db8195c55b3f5b993e802bbf ""
   "/usr/local/texlive/2016/texmf-var/web2c/xetex/xelatex.fmt" 1492672231 3746849 0b491056ceb54f69e6ea9ccec3cead46 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "chap6.aux" 1542551138 2396 f2b076921a305be0342e8e2dcaf4ff12 ""
-  "chap6.bbl" 1542551135 1983 c789b8b2e2ff60989c671635ad8473c2 "bibtex chap6"
-  "chap6.tex" 1542551134 14766 2d4c88fdaedc7f5a7467984c41135a65 ""
-  "chap6.toc" 1542551138 406 2650f42fda80ebb7cea45409fd55cd5d ""
-  "figures/batterytemp.eps" 1542550268 46211 3a647ce37add87c742a4c66334662613 ""
-  "figures/electropotential1.eps" 1542550268 55678 ff4a6b8ffd19b8935d2d304f0ccfce78 ""
-  "figures/electropotential2.eps" 1542550268 53395 09e5b4a29cc415a6f6af235fbe1df98e ""
-  "figures/electropotential3.eps" 1542550268 48430 72176046add93ea9c4e9e51084a686cc ""
-  "figures/electropotential4.eps" 1542550268 49005 e898b60e7e22cbdc8ca5ec62093c03ee ""
+  "chap7.aux" 1543194479 2636 9d6ae78b7453c493933be0320f34e8fb ""
+  "chap7.bbl" 1543194476 2373 d2097e5d4e847d6f7f753ef36f81cc40 "bibtex chap7"
+  "chap7.tex" 1543194472 15205 d1559fd649f68b5359e7d4c4b5f4e82b ""
+  "chap7.toc" 1543194479 521 26d4ef38d76822d9a965317be45d6bb8 ""
+  "figures/Gibbs.eps" 1543162060 46758 27266891224dc113735c9ac649ebfffb ""
+  "figures/Langmuir.eps" 1543191768 71665 a70741b17b2c83ae6d1a2e486a38cec0 ""
+  "figures/Langmuir_Adsorption_Model.jpg" 1543121582 40437 6d896f880227de11b85456e42b2d9c3a ""
+  "figures/Logfit.eps" 1543147067 81103 8de52e420003763cab960694664a3928 ""
+  "figures/powerfit.eps" 1543147084 75806 0e0843b50776da370b2819c34f6e26c6 ""
+  "figures/specialfit.eps" 1543147149 43095 8c2ee42b001632078857909f2e5fe680 ""
   (generated)
-  "chap6.toc"
-  "chap6Notes.bib"
-  "chap6.log"
-  "chap6.xdv"
-  "chap6.aux"
+  "chap7.toc"
+  "chap7.aux"
+  "chap7.log"
+  "chap7Notes.bib"
+  "chap7.xdv"

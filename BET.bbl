@@ -1,0 +1,92 @@
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{4}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Langmuir}(1918)}]{langmuir1918adsorption}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Langmuir}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of the American Chemical society}\ }\textbf {\bibinfo {volume}
+  {40}},\ \bibinfo {pages} {1361} (\bibinfo {year} {1918})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Brunauer}\ \emph {et~al.}(1938)\citenamefont
+  {Brunauer}, \citenamefont {Emmett},\ and\ \citenamefont
+  {Teller}}]{brunauer1938adsorption}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Brunauer}}, \bibinfo {author} {\bibfnamefont {P.~H.}\ \bibnamefont
+  {Emmett}}, \ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Teller}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Journal of the American chemical society}\ }\textbf {\bibinfo {volume}
+  {60}},\ \bibinfo {pages} {309} (\bibinfo {year} {1938})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Shi}\ \emph {et~al.}(2018)\citenamefont {Shi},
+  \citenamefont {Gu}, \citenamefont {Shen}, \citenamefont {Srivastava},
+  \citenamefont {Santiso},\ and\ \citenamefont {Gubbins}}]{shi2018high}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Shi}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Gu}}, \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Shen}}, \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Srivastava}}, \bibinfo {author}
+  {\bibfnamefont {E.~E.}\ \bibnamefont {Santiso}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {K.~E.}\ \bibnamefont {Gubbins}},\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {The Journal of chemical physics}\ }\textbf
+  {\bibinfo {volume} {148}},\ \bibinfo {pages} {174505} (\bibinfo {year}
+  {2018})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sing}(2001)}]{SING20013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Sing}},\ }\href {\doibase https://doi.org/10.1016/S0927-7757(01)00612-4}
+  {\bibfield  {journal} {\bibinfo  {journal} {Colloids and Surfaces A:
+  Physicochemical and Engineering Aspects}\ }\textbf {\bibinfo {volume}
+  {187-188}},\ \bibinfo {pages} {3 } (\bibinfo {year} {2001})}\BibitemShut
+  {NoStop}%
+\end{thebibliography}%

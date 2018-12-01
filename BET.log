@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  18 NOV 2018 22:25
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  28 NOV 2018 13:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**chap6.tex
-(./chap6.tex
+**BET.tex
+(./BET.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/revtex4-1.cls
@@ -1817,8 +1817,8 @@ Class revtex4-1 Info: multicol was not loaded (OK!) on input line 144.
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-(./chap6.aux)
-\openout1 = `chap6.aux'.
+(./BET.aux)
+\openout1 = `BET.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
@@ -1914,68 +1914,45 @@ ABD: EveryShipout initializing macros
 . Activating mapping `fontspec' on line 144.
 .................................................
 \c@lstlisting=\count325
-\openout3 = `chap6Notes.bib'.
+\openout3 = `BETNotes.bib'.
 
- (./chap6.toc)
+ (./BET.toc)
 \tf@toc=\write7
-\openout7 = `chap6.toc'.
+\openout7 = `BET.toc'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 201.
+LaTeX Font Info:    Try loading font information for U+msa on input line 207.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 201.
+LaTeX Font Info:    Try loading font information for U+msb on input line 207.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Missing character: There is no 　 in font [lmroman10-regular]:mapping=tex-text;!
-File: figures/electropotential1.eps Graphic file (type eps)
+File: figures/Langmuir_Adsorption_Model.jpg Graphic file (type QTm)
 
-<figures/electropotential1.eps>
-File: figures/electropotential2.eps Graphic file (type eps)
- <figures/electropotential2.eps>
-File: figures/electropotential3.eps Graphic file (type eps)
+<use  "figures/Langmuir_Adsorption_Model.jpg" >
+File: figures/900px-BET_Multilayer_Adsorption.svg.png Graphic file (type QTm)
 
-<figures/electropotential3.eps>
-File: figures/electropotential4.eps Graphic file (type eps)
- <figures/electropotential4.eps>
-File: figures/batterytemp.eps Graphic file (type eps)
-
-<figures/batterytemp.eps> [1]
+<use  "figures/900px-BET_Multilayer_Adsorption.svg.png" > [1]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 295.
+ on input line 245.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
-\TU/lmr/m/n/10 it can be interpreted that for the cell
+Overfull \hbox (2.40312pt too wide) in paragraph at lines 316--316
+[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
-\TU/lmr/m/n/10 Hg|$[][][][][][]$,KCl(Sat.)||KCl(0.09 M),AgCl|Ag there
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 335--337
-\TU/lmr/m/n/10 However, the line is too far from the data point
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 335--337
-\TU/lmr/m/n/10 of 25 $[] []$, indicating the indifference of calculating
- []
-
-(./chap6.bbl) [2] (./chap6.aux) ) 
+[2] [3] (./BET.bbl) [4] (./BET.aux) ) 
 Here is how much of TeX's memory you used:
- 41804 strings out of 493068
- 899113 string characters out of 6135636
- 1112615 words of memory out of 5000000
- 45224 multiletter control sequences out of 15000+600000
- 13286 words of font info for 67 fonts, out of 8000000 for 9000
+ 41818 strings out of 493068
+ 901018 string characters out of 6135636
+ 1116795 words of memory out of 5000000
+ 45251 multiletter control sequences out of 15000+600000
+ 8338 words of font info for 49 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 62i,18n,67p,10433b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,13n,67p,10431b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chap6.xdv (2 pages, 65228 bytes).
+Output written on BET.xdv (4 pages, 127600 bytes).

@@ -1,0 +1,10 @@
+\contentsline {title}{Measurement of surface tension and isothermal adsorption}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{1}{}
+\contentsline {section}{\numberline {II}Methods and Procedures}{2}{}
+\contentsline {section}{\numberline {III}Results and Analysis}{2}{}
+\contentsline {section}{\numberline {IV}Conclusion}{3}{}
+\contentsline {section}{\numberline {}References}{3}{}
