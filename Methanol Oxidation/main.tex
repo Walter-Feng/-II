@@ -1,0 +1,262 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Packages
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{array}
+\graphicspath{{figures/}} % Location of the graphics files
+\usepackage{booktabs} % Top and bottom rules for table不【
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{wrapfig} % Allows wrapping text around tables and figures
+\usepackage[centering]{geometry}
+
+\usepackage{ctex}
+\usepackage{textcomp}
+\usepackage[final]{pdfpages}
+\geometry{top=25.4mm, bottom=25.4mm, left=31.8mm, right=31.8mm}
+
+
+
+\usepackage{titlesec}
+\titleformat{\section}{\sihao\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\xiaosi\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\xiaosi}{\thesubsubsection}{1em}{}
+
+\usepackage{chemfig}
+
+\usepackage{fontspec} % 定制字体
+
+\setmainfont{Times New Roman}
+
+\usepackage{xunicode,xltxtra}
+\usepackage{setspace}
+\newcommand{\chuhao}{\fontsize{42pt}{44.9pt}\selectfont}    % 初号, 1.5倍行距
+\newcommand{\xiaochu}{\fontsize{30pt}{40pt}\selectfont}    % 小初, 1.5倍行距
+\newcommand{\yihao}{\fontsize{26pt}{36pt}\selectfont}    % 一号, 1.4倍行距
+\newcommand{\erhao}{\fontsize{22pt}{28pt}\selectfont}    % 二号, 1.25倍行距
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont}    % 小二, 单倍行距
+\newcommand{\sanhao}{\fontsize{16pt}{24pt}\selectfont}    % 三号, 1.5倍行距
+\newcommand{\xiaosan}{\fontsize{15pt}{22pt}\selectfont}    % 小三, 1.5倍行距
+\newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}  
+\newcommand{\sihaox}{\fontsize{14pt}{28pt}\selectfont}   % 四号, 1.5倍行距
+\newcommand{\banxiaosi}{\fontsize{13pt}{19.5pt}\selectfont}    % 半小四, 1.5倍行距
+\newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}    % 小四, 1.5倍行距
+\newcommand{\dawuhao}{\fontsize{11pt}{11pt}\selectfont}    % 大五号, 单倍行距
+\newcommand{\wuhao}{\fontsize{10.5pt}{15.75pt}\selectfont}    % 五号, 单倍行距
+\newcommand{\xiaowu}{\fontsize{9pt}{9pt}\selectfont}    % 五号, 单倍行距
+
+\usepackage{listings}
+\usepackage{xcolor} % 定制颜色
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{
+backgroundcolor=\color{white},      % choose the background color
+basicstyle=\footnotesize\ttfamily,  % size of fonts used for the code
+columns=fullflexible,
+tabsize=4,
+breaklines=true,               % automatic line breaking only at whitespace
+captionpos=b,                  % sets the caption-position to bottom
+commentstyle=\color{mygreen},  % comment style
+escapeinside={\%*}{*)},        % if you want to add LaTeX within your code
+keywordstyle=\color{blue},     % keyword style
+stringstyle=\color{mymauve}\ttfamily,  % string literal style
+frame=single,
+rulesepcolor=\color{red!20!green!20!blue!20},
+% identifierstyle=\color{red},
+language=Mathematica,
+}
+
+\usepackage[version=4]{mhchem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Commands
+\def\celsius{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}}
+
+%This means in the text, you can just type "\compoundA" or "\compoundB" between words
+% to print out K5CoW12O40 or K6CoW12O40. Like..."We obtained quite a lot of \compoundA and %blabla.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\thesection{\arabic{section}} 
+
+\title{甲酸氧化反应动力学探究}
+
+
+\begin{document}
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+
+{\sihaox\fangsong
+\begin{titlepage}
+\vspace{2cm}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{preface/Zhejianguniversitytitle.png}\\[1cm]
+
+\includegraphics[width=0.2\textwidth]{preface/timg-2.jpeg}
+
+\sanhao{\textbf{本~科~实~验~报~告}}\\[2cm]
+\end{center}
+
+
+
+
+\begin{minipage}{0.2\textwidth}
+\begin{flushright}
+姓名：
+
+学院：
+
+系：
+
+专业：
+
+学号：
+
+指导教师：
+\end{flushright}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\dlmu[0.8\linewidth]{黄宗玮，李一刘，秦宇轩，吴冠履，李睿，王永尧}
+
+\dlmu[0.8\linewidth]{竺可桢学院}
+
+\dlmu[0.8\linewidth]{化学系}
+
+\dlmu[0.8\linewidth]{求是科学班（化学）}
+
+\dlmu[0.8\linewidth]{}
+
+\dlmu[0.8\linewidth]{王永尧}
+\end{center}
+\end{minipage}\\[2cm]
+
+\begin{center}
+\number\year 年 \number\month 月 \number\day 日
+\end{center}
+\end{titlepage}
+}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Contents Table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\contentsname}{目录}
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bibliographystyle{unsrt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Title
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\xiaosan\textbf{甲酸氧化反应动力学探究}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Author
+
+%Please Type your name with your student number
+
+\begin{center}
+\xiaosi{黄宗玮，李一刘，秦宇轩，吴冠履，李睿，王永尧}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Abstract & KeyWord
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\wuhao{
+\textbf{摘要：} 
+
+\textbf{关键词：}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Introduction
+
+\section*{引言}
+\addcontentsline{toc}{section}{引言}
+\xiaosi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Reagents and Devices
+\section{试剂与仪器}
+
+\subsection{试剂}
+
+
+\subsection{仪器}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Methods and Procedures
+\section{实验步骤}
+
+
+
+\subsection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Results and Analysis
+\section{实验结果和分析}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%References
+%Not for now.
+\bibliography{References}
+\addcontentsline{toc}{section}{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Review
+\newpage
+\section*{实验感想}
+\wuhao
+\addcontentsline{toc}{section}{实验感想}
+
+
+\begin{center}
+\xiaosan\textbf{}
+
+\xiaosi{李睿(3160102098)}
+\end{center}
+\wuhao
+
+
+
+
+\end{document}

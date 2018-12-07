@@ -1,0 +1,12 @@
+\contentsline {title}{Measurement of surface area of molecular sieves using BET theory}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{1}{}
+\contentsline {subsection}{\numberline {A}Langmuir: unimolecular equilibrium}{1}{}
+\contentsline {subsection}{\numberline {B}BET: multi-molecular equilibrium}{1}{}
+\contentsline {subsection}{\numberline {C}Methodology}{2}{}
+\contentsline {section}{\numberline {II}Results and Analysis}{3}{}
+\contentsline {section}{\numberline {III}Conclusion}{4}{}
+\contentsline {section}{\numberline {}References}{4}{}
