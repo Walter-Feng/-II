@@ -1,8 +1,10 @@
 \contentsline {title}{The kinetics of the oxidation of formic acid by bromine in aqueous media}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
 \tocdepth@munge 
-\contentsline {section}{\numberline {}Contents}{1}{}
+\contentsline {section}{\numberline {}Contents}{2}{}
 \tocdepth@restore 
-\contentsline {section}{\numberline {I}Introduction}{1}{}
-\contentsline {section}{\numberline {II}Methods and Procedures}{1}{}
-\contentsline {section}{\numberline {III}Result and Analysis}{1}{}
-\contentsline {section}{\numberline {}References}{3}{}
+\contentsline {section}{\numberline {I}Introduction}{2}{}
+\contentsline {section}{\numberline {II}Methods and Procedures}{3}{}
+\contentsline {section}{\numberline {III}Result and Analysis}{3}{}
+\contentsline {section}{\numberline {IV}Conclusions}{9}{}
+\contentsline {section}{\numberline {}References}{9}{}

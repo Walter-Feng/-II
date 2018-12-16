@@ -19,13 +19,13 @@
 %  4)  latex apssamp.tex
 %
 \documentclass[%
- reprint,
+%reprint,
 %superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
 %frontmatterverbose, 
-%preprint,
+preprint,
 %showpacs,preprintnumbers,
 %nofootinbib,
 %nobibnotes,
@@ -178,9 +178,11 @@ language=Mathematica,
              %  but any date may be explicitly specified
 
 \begin{abstract}
+The kinetics of the oxidation of formic acid by bromine in aqueous media is investigated using both spectrophotometric method and electrochemistry method, added with theoretical deduction for the error between these two methods. Computational calculation using Gaussian 16 provides evidence for the proposed mechanism.
+
 
 \begin{description}
-\item[Keywords]
+\item[Keywords] formic acid, bromine, spectrophotometry, electrochemistry, Gaussian 16
 
 \end{description}
 \end{abstract}
@@ -207,32 +209,33 @@ is considered to consist of the following elementary reactions:
 Then it follows that
 \begin{equation}
 	\begin{cases}
-	[\ce{HCOO-}] = \frac{K_\text{a}/c(\ce{H+})}{1+K_\text{a}/c(\ce{H+})} c(\ce{HCOOH}) \\[0.3cm]
-	[\ce{Br2}] = \frac{1}{1+K_\text{\ce{Br}}/c(\ce{Br-})} c(\ce{Br2})\\[0.3cm]
+	[\ce{HCOO-}] = \frac{1}{c(\ce{H+})/K_\text{a}+1} c(\ce{HCOOH}) \\[0.3cm]
+	[\ce{Br2}] = \frac{1}{c(\ce{Br-})/K_\text{\ce{Br}}+1} c(\ce{Br2})\\[0.3cm]
 	\frac{d}{dt} c(\ce{Br2}) = - k_1 [\ce{HCOO-}] [\ce{Br2}] 
 	\end{cases}
 \end{equation}
 if there is abundant supply of \ce{HCOOH} as well as \ce{H+} and \ce{Br-}, the concentration of them can be regarded constant, and the total reaction rate can be written as
 \begin{equation}
-	\frac{d c(\ce{Br2})}{dt} = -\frac{k_1 K_\text{a}  c(\ce{HCOOH})c(\ce{Br2})/c(\ce{H+})}{[1+K_\text{a}/c(\ce{H+})][1+K_\text{\ce{Br}}/c(\ce{Br-})]}
+	\frac{d c(\ce{Br2})}{dt} = -\frac{k_1c(\ce{HCOOH})c(\ce{Br2})}{[c(\ce{H+})/K_\text{a}+1][c(\ce{Br-})/K_\text{\ce{Br}}+1]}
 \end{equation}
 and the total reaction rate constant $k$ is equivalent to
 \begin{equation}
-	k=\frac{k_1 K_\text{a}  c(\ce{HCOOH})/c(\ce{H+})}{[1+K_\text{a}/c(\ce{H+})][1+K_\text{\ce{Br}}/c(\ce{Br-})]}
+	k=\frac{k_1c(\ce{HCOOH})}{[c(\ce{H+})/K_\text{a}+1][c(\ce{Br-})/K_\text{\ce{Br}}+1]}
 \end{equation}
 Thus the total reaction can be approximated as a reaction in first order, which enables several methods for the detection of the reaction rate constant under different conditions, including spectrophotometric method and electrochemistry method.
 
-The M06-2X functional is a highnonlocality functional with double the amount of nonlocal exchange (2X), and it is parametrized only for nonmetals, which gains a superiority over widely-used functionals including B3LYP, B98, PBE, among calculations involving main-group thermochemistry, kinetics, noncovalent interactions, and electronic excitation energies to valence and Rydberg states.\cite{zhao2008m06}
+To further verify the mechanism, Gaussian 16 is utilized to calculate the activation energy of this reaction. Density fuctional theory(DFT) is one of the efficient ways with decent accuracy compared with the traditional Hartree-Fock method. The M06-2X functional is a highnonlocality functional with double the amount of nonlocal exchange (2X), and it is parametrized only for nonmetals, which gains a superiority over widely-used functionals including B3LYP, B98, PBE, among calculations involving main-group thermochemistry, kinetics, noncovalent interactions, and electronic excitation energies to valence and Rydberg states.\cite{zhao2008m06}
 
 \section{Methods and Procedures}
+50 mL of standard solution containing 10 mL of 0.0075 M \ce{Br2} solution and 5 mL of 2 M HCl solution is prepared, with another 50 mL of standard solution containing 10 mL of 1 M \ce{KBr} solution and 5 mL of 2 M \ce{HCOOH}, volumetrized using deionized water. They are kept in thermostat with temperature at 25 \celsius for 10 min, then mixed and subjected to either spectrophotometric method or electrochemistry method immediately. Based on it a series of experiments are carried out with only one of the four variants - namely $V(HCOOH)$, $V(HCl)$, $V(HBr)$ and temperature - changed respectively.
 
-
-
+Gaussian 16 is utilized for the computational calculation, choosing cc-pVDZ as the basic sets and M06-2X functional as the electron density functional. In order to obtain structures of transition state the bond length between H atom in the formic acid and one of the Br atom in bromine is fixed, with several others fixed occasionally.
 
 \section{Result and Analysis}
-
-\begin{table*}
-%\caption{Experimental data of the measurement of $k$ using spectrophotometric method and electrochemistry method respectively, where Group A stands for spectrophotometric method, Group B for electrochemistry method.}
+\begin{table}
+\centering
+\caption{Experimental data of the measurement of $k$ using spectrophotometric method and electrochemistry method respectively, where Group A stands for spectrophotometric method, Group B for electrochemistry method.}
+\resizebox{\textwidth}{!}{
 \begin{tabular}{c|ccccc|ccccc}\hline
 & \multicolumn{5}{c|}{Group A} & \multicolumn{5}{c}{Group B} \\\hline
 \multicolumn{11}{c}{$c(\ce{HCl})$} \\\hline
@@ -241,10 +244,10 @@ The M06-2X functional is a highnonlocality functional with double the amount of 
    2.059 & 2.204 & 1.782 & 1.593 & 0.8707 &\\
    $R^2$ & 0.999948 & 0.999963 & 0.999774 & 0.999790 & 0.999584 & 0.999868 & 0.999892 & 0.999863 & 0.999490 &\\\hline
  \multicolumn{11}{c}{$c(\ce{KBr})$} \\\hline
- $c(\ce{KBr})$/M & 0.05000 & 0.07500 & 0.1000 & 0.1500 & 0.2000 & 0.1000 & 0.1200 & 0.2000 & 0.3000 & 0.4000\\
- $k \cdot 10^{-3}$/s &  4.803 & 4.035 & 3.491 & 2.760 & 2.626 & 2.573 & 2.120 & 1.940 & 1.377 & 1.861\\
+ $c(\ce{KBr})$/M & 0.05000 & 0.07500 & 0.1000 & 0.1500 & 0.2000 & 0.1000 & 0.1200 & 0.2000 & 0.3000 & \\
+ $k \cdot 10^{-3}$/s &  4.803 & 4.035 & 3.491 & 2.760 & 2.626 & 2.573 & 2.120 & 1.940 & 1.377 & \\
  $R^2$ & 0.999880 & 0.999937 & 0.999963 & 0.999257 & 0.999954 & 0.999913 & 0.999910 & 0.999715 & 0.999885 &
-   0.999706 \\\hline
+  \\\hline
  \multicolumn{11}{c}{$c(\ce{HCOOH})$} \\\hline
  $c(\ce{HCOOH})$/M & 0.05000 & 0.1000 & 0.1500 & 0.2000 & 0.2500 & 0.03000 & 0.05000 & 0.07000 & 0.1000 & 0.1500 \\
  $k \cdot 10^{-3}$/s & 1.734 & 3.491 & 5.366 & 6.834 & 8.257 & 0.9019 & 1.248 & 1.850 & 2.728 & 3.560 \\
@@ -257,38 +260,96 @@ The M06-2X functional is a highnonlocality functional with double the amount of 
  $R^2$ & 0.999963 & 0.999928 & 0.999431 & 0.999916 &
    0.999844 & 0.999843 & 0.999913 & 0.999936 & 0.999683 &
    0.999425 \\\hline
-\end{tabular}
-\end{table*}
-
-\begin{figure*}
-\includegraphics[width=0.8\textwidth]{figures/reaction_mechanic.png}
-\caption{The proposed mechanism of the oxidation of formic acid by bromine}
-\end{figure*}
-
-\begin{table*}
+\end{tabular}}
+\label{data}
+\end{table}
+\begin{table}
 \centering
 \caption{Calculation result from Gaussian 16 of the energy / Gibbs free energy (without solvent effect) of the \ce{HCOO-}-\ce{Br2}~system in different distance between hydrogen atom in formic acid and bromide atom in bormine, choosing -5337 Hartree as the zero potential energy surface. "N/A" refers to unavailability of the data, due to the fact that the system did not converge during the calculation.}
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ccccccccccc}\hline
 Distance(\AA) & 1.9 & 2.0 & 2.1 & 2.2 & 2.4 & 2.6 & 2.8 & 3.1 & 3.5 & 5.0 \\\hline
 -E(Hartree) & .537892 & .533230 & .529462 & .526210 & .520616 & .516360 & .512932 & .508763 &.504027 & .498300 \\
 -G(Hartree) & .555580 & .549755 & .545271 & .541625 & .535825 & .531732 & .528610 & .524980 & N/A & .525179 \\\hline
 \end{tabular}
-\end{table*}
-
-\begin{table*}
+}
+\label{gascalc}
+\end{table}
+\begin{table}
 \centering
 \caption{Calculation result from Gaussian 16 of the Gibbs free energy of different species in the system, with solvent effect considered.}
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ccccccccc}\hline
-Species & \ce{Br2} & \ce{Br-} & \ce{Br3-} & \ce{HBr} & \ce{H+} & \ce{HCOOH} & \ce{HCOO-} & \ce{CO2} \\
+Species & \ce{Br2} & \ce{Br-} & \ce{Br3-} & \ce{HBr} & \ce{H+} & \ce{HCOOH} & \ce{HCOO-} & \ce{CO2} \\\hline
 -G(Hartree) & -5148.359998 & -2574.362887 & -7722.741404 & -2574.787315 & -0.22518 & -189.721106 & -189.279246 & -188.553856 \\\hline
 \end{tabular}
-\end{table*}
+}
+\label{speciescalc}
+\end{table}
+\begin{figure}
+\centering
+\subfigure{
+	\includegraphics[width=0.48\textwidth]{figures/hcooh.eps}
+	\label{hcooh}
+}
+\subfigure{
+	\includegraphics[width=0.48\textwidth]{figures/kbr.eps}
+	\label{kbr}
+}
+\subfigure{
+	\includegraphics[width=0.48\textwidth]{figures/hcl.eps}
+	\label{HCl}
+}
+\subfigure{
+	\includegraphics[width=0.48\textwidth]{figures/exptemp.eps}
+	\label{temp}
+}
+\caption{The trends of $k$ towards different variants, among which the data of $c(\ce{KBr})$ and $c(\ce{HCl})$ are fitted by $\frac{C_1}{c/C_2 + 1}$.}
+\label{fit}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/reaction_mechanic.png}
+\caption{The proposed mechanism of the oxidation of formic acid by bromine}
+\label{mechanism}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/process-G.jpg}
+\caption{Gibbs free energy curve of the system at different state}
+\label{GCurve}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.45\textwidth]{figures/TS1-white.png}
+\caption{Ball-stick model of the transition state}
+\end{figure}
+\begin{table}
+\centering
+\caption{The fitting result of the trends of $k$ towards different variants}
+\begin{tabular}{c|ccccc}\hline
+& Variant & Fitting Function & $R^2$ \\\hline\\[-1em]
+\multirow{6}{*}{A} & $c$(HCOOH) & $k = 0.0327773 c + 2.19794 \times 10^{-4}$ &  0.996417 \\\\[-1em]
+& $c$(KBr) & $k= \frac{0.00693094}{1+9.33714 c}$ & 0.998844 \\\\[-1em]
+& $c$(HCl) & $k = \frac{0.0284047}{1+ 71.825 c}$ & 0.998414 \\\\[-1em]
+& $T$ & $\ln k = - \frac{6999.34}{T} + 17.8541$ & 0.996029	\\\\[-1em]\hline\\[-1em]
+\multirow{6}{*}{B} & $c$(HCOOH) & $k = 0.0230375 c + 2.14535 \times 10^{-4}$ & 0.985107 \\\\[-1em]
+& $c$(KBr) & $k= \frac{0.00385937}{1+5.64876 c}$ & 0.996225 \\\\[-1em]
+& $c$(HCl) & $k = \frac{0.0303935}{1+ 158.798 c}$ & 0.999134 \\\\[-1em]
+& $T$ & $\ln k = - \frac{9100.81}{T} + 24.2389$ & 0.999577	\\\hline
+\end{tabular}
+\end{table}
 
+
+The experimental data obtained are shown in Table.\ref{data}, with their graphic representation shown in Fig.\ref{fit}. It is
+quite evident that there exist a sharp difference between results from the spectrophotometric method and the electrochemistry method. Two factors may contribute to the difference, diffusion and response function, that mainly affect the data from electrochemistry method.
+
+To further elaborate this, we start from the basic equation that describes the diffusion of a substance in the liquid phase to the surface of a solid:
 \begin{equation}
 	\frac{d c_s}{dt} = k (c_l - c_s)
 \label{diffusion}
 \end{equation}
-where $c_l$ refers to the concentration of the substance in the liquid phase, while $c_s$ the concentration in the solid phase. Considering that the diffusion of the substance is comparatively small, $c_l$ can be regarded as dominated by chemical reaction, namely
+where $c_l$ refers to the concentration of the substance in the liquid phase, while $c_s$ the `equivalent' concentration in the solid phase, which can be deduced by the chemical potential of the substance on the surface. Considering that the diffusion of the substance is comparatively small, $c_l$ can be regarded as dominated by chemical reaction, namely
 \begin{equation}
 	c_l = c' e^{-k't}
 \end{equation}
@@ -308,7 +369,7 @@ where $C_1,C_2$ are constants that are replaced using the boundary condition,
 	c_s \big|_{t=0} = 0
 \end{equation}
 and infomation from $c_s$.
-It reveals the influence of the diffusion in the measurement, the term $e^{(k'-k)t}-1$ being the main delimiter. Smaller $k$ with small sets of $t$ will result in larger deficiency in the measurement of $k'$, which might be the case in the electrochemistry method.
+It reveals the influence of the diffusion in the measurement, the term $e^{(k'-k)t}-1$ being the main delimiter. Smaller $k$ with small sets of $t$ will result in larger deficiency in the measurement of $k'$, which might be the case in the electrochemistry method. It can be partly verified by the experimental result of the trend of $k$ towards the temperature, which indicates a higher activation energy. This can be explained by the contribution of faster diffusion of \ce{Br2} towards the surface of the electrodes.
 
 The non-constant response function of the measurement system might also contribute to the error. The detection of current is achieved through complicated electromagnetic system, which results in non-constant response function. The output function can be regarded as the convolution of the signal function and the response function, namely
 \begin{equation}
@@ -316,8 +377,11 @@ The non-constant response function of the measurement system might also contribu
 \end{equation}
 where $P$ stands for the output, while $S$ and $R$ for the signal function and the response function, with $T$ defined as the time interval for a measurement. Given that $S$ is a exponential function, it can be readily proved that $P$ is also a exponential function under the same base. A non-constant response function, however, deviates the output function with considerable error, and it is conspicuous that a larger time interval leads to worse data sets. Compared with spectrophotometric method, electrochemistry method is much more likely to suffer from such a factor, w.r.t. its relatively longer measurement of time.
 
+The result of the computational calculation is partially listed in Table.\ref{gascalc},\ref{speciescalc}. Table.\ref{gascalc} reveals the absense of activation energy, which should be attributed to the active property of the ions in the gas phase. Introducing solvent effect, the activation energy calculated is 0.013081 Hartree, which is equivalent to 8.2085 kcal/mol. Experimental data exhibit the activation energy of 
+14.48 kcal/mol, which partly verifies the proposed mechanism. The deviation is attributed to many reasons, including decent accuracy of the DFT method (Currently no DFT method can reach chemical accuracy), decent approximation of the solvent effect which ignores the dynamic interaction of the system and the solvent, and neglecting the interaction between reactants, such as two HCOOH molecules. From another perspective, the observed activation energy cannot represent the correct activation energy, mainly because of the various energy state of both the reactants and transition state concerning kinetic energy and electromagnetic energy, occupying serveral cells in the phase space, which leads to distributed activation energy in the practical system.
 
-
-
+ Calculation also reveals that there is no tendency of reaction between HCOOH and \ce{Br2}, while the species \ce{Br3-} will react with \ce{HCOO-} and decompose into \ce{Br-} ions simultaneously, requiring much energy that is equivalent to that required for the decomposition of \ce{Br3-} into \ce{Br2} and \ce{Br-} itself. With these results we propose the mechanism whose graphic representation is shown in Fig.\ref{mechanism}.
+\section{Conclusions}
+Both spectrophotometric method and electrochemistry method verifies the proposed mechanism that \ce{HCOOH} is oxidized by \ce{Br2} through the main reaction of second order between \ce{HCOO-} and \ce{Br2}. Error between two methods is attributed to the diffusion of \ce{Br2} towards the electrode and the response function of the electrochemistry detection system. The activation energy is predicted decently by computational calculation, further denying the possibility of the reaction between neutral \ce{HCOOH} and \ce{Br2}.
 \bibliography{References}
 \end{document}
