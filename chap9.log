@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  18 DEC 2018 16:43
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  17 DEC 2018 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**exp.tex
-(./exp.tex
+**chap9.tex
+(./chap9.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/revtex4-1.cls
@@ -75,10 +75,10 @@ Class revtex4-1 Info: RevTeX society APS selected on input line 31.
 Class revtex4-1 Warning: No journal specified, using default pra.
 
 Class revtex4-1 Info: APS journal PRA selected on input line 7545.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/aps12pt4-1.rtx
-File: aps12pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
 documentation)
-Class revtex4-1 Info: RevTeX pointsize 12pt selected on input line 30.
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -1817,8 +1817,8 @@ Class revtex4-1 Info: multicol was not loaded (OK!) on input line 144.
 LaTeX Warning: Unused global option(s):
     [10.5pt].
 
-(./exp.aux)
-\openout1 = `exp.aux'.
+(./chap9.aux)
+\openout1 = `chap9.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
@@ -1914,47 +1914,47 @@ ABD: EveryShipout initializing macros
 . Activating mapping `fontspec' on line 144.
 .................................................
 \c@lstlisting=\count325
-\openout3 = `expNotes.bib'.
+\openout3 = `chap9Notes.bib'.
 
- [1] (./exp.toc)
-\tf@toc=\write7
-\openout7 = `exp.toc'.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 215.
+LaTeX Font Info:    Try loading font information for U+msa on input line 190.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 215.
+LaTeX Font Info:    Try loading font information for U+msb on input line 190.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2]
-File: figures/hcooh.eps Graphic file (type eps)
-
-<figures/hcooh.eps>
-File: figures/kbr.eps Graphic file (type eps)
- <figures/kbr.eps>
-File: figures/hcl.eps Graphic file (type eps)
- <figures/hcl.eps>
-File: figures/exptemp.eps Graphic file (type eps)
- <figures/exptemp.eps>
-File: figures/reaction_mechanic.png Graphic file (type QTm)
-
-<use  "figures/reaction_mechanic.png" >
-File: figures/process-G.jpg Graphic file (type QTm)
- <use  "figures/process-G.jpg" >
-File: figures/TS1-white.png Graphic file (type QTm)
-
-<use  "figures/TS1-white.png" > [3] [4] [5] [6] [7] [8] (./exp.bbl) [9]
-[10] [11] [12] [13] [14] (./exp.aux) ) 
+)
+*************************************************
+* fontspec warning: "script-not-exist"
+* 
+* Font 'FandolFang-Regular' does not contain script 'CJK'.
+*************************************************
+\g__fontspec_family_FandolFang-Regular_int=\count326
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'FandolFang-Regular(0)' created for font 'FandolFang-Regular'
+. with options [Script={CJK},Extension={.otf}].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"[FandolFang-Regular.otf]/OT"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+.................................................
+File: figures/soapdynamics.eps Graphic file (type eps)
+<figures/soapdynamics.eps>
+File: figures/SoapArrhenius.eps Graphic file (type eps)
+ <figures/SoapArrhenius.eps> (./chap9.bbl) [1]
+[2] (./chap9.aux) ) 
 Here is how much of TeX's memory you used:
- 42086 strings out of 493068
- 916973 string characters out of 6135636
- 1127813 words of memory out of 5000000
- 45497 multiletter control sequences out of 15000+600000
- 15374 words of font info for 80 fonts, out of 8000000 for 9000
+ 43813 strings out of 493068
+ 932459 string characters out of 6135636
+ 1199528 words of memory out of 5000000
+ 47227 multiletter control sequences out of 15000+600000
+ 15769 words of font info for 78 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 62i,19n,78p,10431b,708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,9n,68p,10433b,3009s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on exp.xdv (14 pages, 232480 bytes).
+Output written on chap9.xdv (2 pages, 16824 bytes).
