@@ -145,7 +145,7 @@ language=Mathematica,
 
 %\preprint{APS/123-QED}
 
-\title{Measurement of surface area of molecular sieves using BET theory}% Force line breaks with \\
+\title{Measurement of the rate constant and the activation energy of ethyl acetate saponification}% Force line breaks with \\
 %\thanks{A footnote to the article title}% give thanks
 
 \author{Rui Li}
@@ -159,16 +159,16 @@ language=Mathematica,
 
 %\collaboration{MUSO Collaboration}%\noaffiliation
 
-\author{Zong Wei Huang}
+%\author{Zong Wei Huang}
 % \homepage{http://www.Second.institution.edu/~Charlie.Author}
 %\affiliation{
 % Second institution and/or address\\
 % This line break forced% with \\
 %}%
-\affiliation{
-Qiushi science class (chemistry)\\
- Chu Kochen Honor College
-}%
+%\affiliation{
+%Qiushi science class (chemistry)\\
+% Chu Kochen Honor College
+%}%
 %\author{Delta Author}
 %\affiliation{%
 % Authors' institution and/or address\\
@@ -185,14 +185,35 @@ Qiushi science class (chemistry)\\
 %\keywords{Suggested keywords}%Use showkeys class option if keyword
                               %display desired
 \maketitle
-\begin{table*}
+\begin{figure*}[h]
+\centering
+\subfigure[Fitted curve]{
+	\includegraphics[width=0.36\textheight]{figures/soapdynamics.eps}
+}
+\subfigure[$\ln{k}-\frac{1}{T}$]{
+	\includegraphics[width=0.3\textheight]{figures/SoapArrhenius.eps}
+}
+\caption{The fitted curve of the reaction process with a fit of $k$ according to Arrhenius equation}
+\end{figure*}
+\begin{figure*}
+\centering
+\subfigure[distribution]{
+	\includegraphics[width=0.4\textwidth]{figures/MeOHH2Odistribution.eps}
+}
+\subfigure[density plot]{
+	\includegraphics[width=0.4\textwidth]{figures/fuck.eps}
+}
+\caption{The distribution of MeOH-\ce{H2O} mixed system with molar ratio of 3:7. Red dots in the first figure stands for the position of \ce{H2O}, while the stains in the second figure stands for the clusters of MeOH molecules.}
+\label{MeOH}
+\end{figure*}
+\begin{table}
 \caption{The fitting result of the reaction rate constant}
-\begin{tabular}{ccccccc}\hline
-$T$/\celsius & \multicolumn{2}{c}{25} & 30 & 35 & 40 & 45 \\\hline
+\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+$T$/\celsius & \multicolumn{2}{c|}{25} & 30 & 35 & 40 & 45 \\\hline
 $k$ & 0.09517 & 0.08650 & 0.1423 & 0.1609 & 0.2445 & 0.3392 \\\hline
 \end{tabular}
 \label{data}
-\end{table*}
+\end{table}
 Starting from
 \begin{equation}
 	E_t = \frac{1}{ak}\frac{E_0-E_t}{t} + E_\infty
@@ -215,17 +236,35 @@ which is equivalent to the result shown in Table.\ref{data}. The arrhenius fitti
 \begin{equation}
 	k = 13.8186 - \frac{6211.05}{T/\mathrm{K}} 
 \end{equation}
-giving $E_a$ = 51.64 kJ/mol. 
+giving $E_a$ = 51.64 kJ/mol, which is much larger than that from the reference ($41.4\pm 0.6 \, \mathrm{kJ/mol}$)\cite{soap}. This might result from the remainder of NaOH solution in the tube, which cannot be eliminated by just pressing the air into the apparatus. Such a mechanism of mixing the two solutions also allow a delay before forming a complete mixture, which contributes to a deviation of the dynamic equation that truly describes the system. 
+
+For a grand system with arbitrary concentration of two solutions,
+\begin{equation}
+	\frac{d x_1}{dt} = \frac{d x_2}{dt} = k x_1 x_2
+\end{equation}
+which has a solution according to \emph{Mathematica}
+\begin{equation}
+\begin{cases}
+	x_2(t)\to c_1-\frac{e^{c_1 c_2} c_1}{e^{c_1 c_2}-e^{c_1 k t}} \\
+	x_1(t)\to -\frac{e^{c_1 c_2} c_1}{e^{c_1 c_2}-e^{c_1 k t}}
+   \end{cases}
+\end{equation}
+where $x_1(t),x_2(t)$ stands for the concentration of two solutions, $c_1,c_2$ being two constants. However, this solution fail to give proper solution to the system. Thus its approximation is considered, where the difference of the concentration between two solution is regarded as a constant perturbation, namely
+\begin{equation}
+\frac{d x}{dt} = - k x (x-\Delta x)
+\end{equation}
+which leads to
+\begin{equation}
+	x(t) = \frac{a \Delta x e^{k t \Delta x }}{a e^{k t \Delta x }-a+\Delta x}
+\end{equation}
+Considering that $\Delta x$ is comparatively small, the equation simplifies to
+\begin{equation}
+	x(t) \sim \frac{a \Delta x e^{k t \Delta x }}{k t \Delta x+\Delta x} = \frac{a}{1+ kt} e^{kt\Delta x}
+\end{equation}
+thus the term $e^{kt\Delta x}$ acts as a amplifier for $k$, which successfully explains the deviation of the result. 
+
+Microscopic perspective of the system may lead to another doubt that the reaction may not completely follow the second-order mechanism. Simulation of the molecular distribution of methanol and water is well studied, as shown in Fig.\ref{MeOH}, which reveals that the methanol molecules are not uniformly distributed in the water solution. It is of quite reasonable that the ethyl acetate is suffering the same situation in the water solution, which indicates that its practical concentration is over-estimated, which leads to exaggerated rate constant, which again explains the error. 
 
 
-\begin{figure*}
-\centering
-\subfigure[Fitted curve]{
-	\includegraphics[width=0.36\textheight]{figures/soapdynamics.eps}
-}
-\subfigure[$\ln{k}-\frac{1}{T}$]{
-	\includegraphics[width=0.3\textheight]{figures/SoapArrhenius.eps}
-}
-\caption{The fitted curve of the reaction process with a fit of $k$ according to Arrhenius equation}
-\end{figure*}
+\bibliography{References}
 \end{document}
