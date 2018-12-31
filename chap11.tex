@@ -145,7 +145,7 @@ language=Mathematica,
 
 %\preprint{APS/123-QED}
 
-\title{$pVT$ relation of \ce{CO2} and the phenomena of critical points }% Force line breaks with \\
+\title{Measurement of dipole moment of ethyl acetate}% Force line breaks with \\
 %\thanks{A footnote to the article title}% give thanks
 
 \author{Rui Li}
@@ -187,27 +187,29 @@ language=Mathematica,
 \maketitle
 
 \section{Introduction}
-Molecules are not a solid object with fixed electrons on nuclei. Thus it is evident that when a extra electric field is exerted upon a molecule, the electrons will have a different series of wavefunctions according to the \sch's equation. Considering the electric field as a perturbation, the energy of the system can be expanded in power series of electric field $E$, namely
+Molecules are not a solid object with fixed electrons on nuclei. Thus it is evident that when a extra electric field is exerted upon a molecule, the electrons will have a different series of wavefunctions according to the \sch's equation. 
+
+The dipole moment $\mathbf{\mu}$ can be defined as
+\begin{equation}
+  \bm{\mu} = \int \rho(\mathbf{r}) \mathbf{r} \, d^3 \mathbf{r}
+ \end{equation} 
+ where $\rho(\mathbf{r})$ can be directly given by the norm of the wavefunctions. However, computational resources restrict the programs to obtain an explicit set of wavefunctions that can describe the system precisely. Density functional theory, or simply DFT, is mainly based on energy correction of the multiple electron system, cannot guarantee a satisfying result of the wave functions, which hinders obtaining a correct dipole moment derived from the method mentioned above. But hope is not lost. Considering the electric field as a perturbation, the energy of the system can be expanded in power series of electric field $E$, namely
 \begin{equation}
 	H' = H_0' + \frac{\partial H'}{\partial E} E + \frac{1}{2} \frac{ \partial^2 H'}{\partial E^2} E^2 + o(E^2)
 	\label{expand}
 \end{equation}
-where $H_0'$ is the eigenvalue of the energy of the unperturbed system. From another perspective the dipole moment $\mathbf{\mu}$ can be defined as
-\begin{equation}
- 	\mathbf{\mu} = \int \rho(\mathbf{r}) \mathbf{r} \, d^3 \mathbf{r}
- \end{equation} 
- while the electric potential energy in a constant electric field is
+where $H_0'$ is the eigenvalue of the energy of the unperturbed system. The electric potential energy in a constant electric field is
  \begin{equation}
- 	U = - \int \rho(\mathbf{r})d \tau (\mathbf{E} \cdot \mathbf{r}) = - \mathbf{\mu} \cdot \mathbf{E}
+ 	U = - \int \rho(\mathbf{r})d \tau (\mathbf{E} \cdot \mathbf{r}) = - \bm{\mu} \cdot \mathbf{E}
 \label{dipolepotential}
  \end{equation}
  When the electric field is in the same direction as the dipole moment, it can be found that 
  \begin{equation}
- 	\frac{\partial H'}{\partial E} = - \mu
+ 	\frac{\partial H'}{\partial E} = - \bm{\mu}
  \end{equation}
- For a isotropic system polarizde by a constant electric field, the induced dipole moment is approximately proportional to the electric field, namely
+ For a isotropic system polarized by a constant electric field, the induced dipole moment is approximately proportional to the electric field, namely
  \begin{equation}
- 	\mathbf{p}_\text{ind} = \alpha \mathbf{E}
+ 	\mu_\text{ind} = \alpha \mathbf{E}
  \end{equation}
  where $\alpha$ is defined as polarizability. For a anisotropic system, the polarizability should be defined as a two-dimensional tensor,
  \begin{equation}
@@ -242,9 +244,56 @@ where $H_0'$ is the eigenvalue of the energy of the unperturbed system. From ano
 
 In thermodynamics, the direction of the polar molecules is governed by the outer electric field. The direction follows the Boltzmann distribution, namely
 \begin{equation}
-	P(\theta,\phi) d\theta d\phi = e^{-\alpha} e^{-\beta \mu E \cos{\theta}} d\theta d\phi
+	P(\theta,\phi) d\theta d\phi = e^{-\alpha} e^{\beta \mu E \cos{\theta}} d\theta d\phi
 \end{equation}
-where $P$ represents the distribution probability function, $alpha$ 
+where $P$ represents the distribution probability function, $\alpha$ and $\beta$ the constants. $\alpha$ can be regarded as a normalization coefficient, while $\beta$ is equivalent to $1/kT$ in Boltzmann distribution. $\theta$ is the angle of $\mu$ deviated from the direction of electric field, and $\phi$ is the angle on the cross-section surface. Thus the observatory dipole moment is equal to the mean value of dipole moment over the distribution, 
+\begin{equation}
+   \langle  \mu \rangle =
+   \frac{\iint \mu \cos{\theta} \, e^{\beta \mu E \cos{\theta}} d\theta d\phi}{\iint e^{\beta \mu E \cos{\theta}} d\theta d\phi} = \frac{\int \mu \cos{\theta} \, e^{\beta \mu E \cos{\theta}} d\theta}{\int e^{\beta \mu E \cos{\theta}} d\theta}
+ \end{equation} 
+ with the consideration that the dipole moment is directed parallel to the electric field due to symmetry. 
+
+ This is an extraordinary integral. To give analytical result, the variable is replaced by
+ \begin{equation}
+   \begin{cases}
+   z = e^{i\theta}\\
+   \cos{\theta} = \frac{z+z^{-1}}{2} \\
+   d\theta = i e^{-i\theta} dz = \frac{i dz}{z}
+   \end{cases}
+ \end{equation}
+ thus
+ \begin{align*}
+   e^{\beta \mu E \cos{\theta}} & = e^{\beta \mu E (z + z^{-1})/2} \\
+   & = \sum_{n=0}^\infty \frac{(\beta \mu E)^n (z+z^{-1})^{n}}{2^n \, n!} \\
+ \end{align*}
+ The integrals are rewritten as
+ \begin{equation}
+   \langle \mu \rangle =  \frac{\mu\oint_{|z|=1} \sum_{n=0}^\infty \frac{( \beta \mu E)^n (z+z^{-1})^{n+1}}{2^{n+1} \, n! \,\, z} \, idz}
+   {\oint_{|z|=1} \sum_{n=0}^\infty \frac{( \beta \mu E)^n (z+z^{-1})^{n}}{2^n \, n! \,\, z} \, idz}
+ \end{equation}
+ The integrals are determined by the residues in the area $|z| = 1$. It is easily observed that the odd point is $z=0$, and the integrals are given as 
+ \begin{equation}
+   \langle \mu \rangle = \frac{\sum_{n=0}^{\infty} \frac{( \beta \mu E/2)^{2n+1} C_{2n+2}^{n+1}}{(2n+1)!} }{ \sum_{n=0}^{\infty} \frac{( \beta \mu E/2)^{2n} C_{2n}^n}{(2n)!}  } = \frac{\mu I_1(\beta \mu E)}{I_0( \beta \mu E)}
+   \label{besselresult}
+ \end{equation}
+ where $I_n(z)$ represents the BesselI function, which is the solution for the differential equation
+ \begin{equation}
+   z^2 y'' + z y' - (z^2 + n^2) y = 0
+ \end{equation}
+ Expand (\ref{besselresult}) in power series of $\mu$, we obtain
+ \begin{equation}
+\langle \mu \rangle =  \frac{1}{2} \beta  \mu ^2
+E-\frac{1}{16} \mu ^4 \left(\beta
+^3 E^3\right)+\frac{1}{96} \beta
+^5 \mu ^6 E^5+o\left(\mu
+^{7}\right)
+\end{equation}  
+Taking the first term, we get
+\begin{equation}
+  \langle \mu \rangle = \frac{\mu^2 E}{2 kT}
+\end{equation}
+which can be interpreted as the polarization of the system inducted by the electric field.
+
 
 
 
