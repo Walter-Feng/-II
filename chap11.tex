@@ -145,7 +145,7 @@ language=Mathematica,
 
 %\preprint{APS/123-QED}
 
-\title{$pVT$ relation of \ce{CO2} and the phenomena of critical points }% Force line breaks with \\
+\title{The measurement of dipole moment of ethyl acetate}% Force line breaks with \\
 %\thanks{A footnote to the article title}% give thanks
 
 \author{Rui Li}
@@ -159,16 +159,16 @@ language=Mathematica,
 
 %\collaboration{MUSO Collaboration}%\noaffiliation
 
-%\author{Zong Wei Huang}
+\author{Zong Wei Huang}
 % \homepage{http://www.Second.institution.edu/~Charlie.Author}
 %\affiliation{
 % Second institution and/or address\\
 % This line break forced% with \\
 %}%
-%\affiliation{
-%Qiushi science class (chemistry)\\
-% Chu Kochen Honor College
-%}%
+\affiliation{
+Qiushi science class (chemistry)\\
+ Chu Kochen Honor College
+}%
 %\author{Delta Author}
 %\affiliation{%
 % Authors' institution and/or address\\
@@ -187,16 +187,27 @@ language=Mathematica,
 \maketitle
 
 \section{Introduction}
-Molecules are not a solid object with fixed electrons on nuclei. Thus it is evident that when a extra electric field is exerted upon a molecule, the electrons will have a different series of wavefunctions according to the \sch's equation. Considering the electric field as a perturbation, the energy of the system can be expanded in power series of electric field $E$, namely
+Molecules are not a solid object with fixed electrons on nuclei. Thus it is evident that when a extra electric field is exerted upon a molecule, the electrons will have a different series of wavefunctions according to the \sch's equation. 
+
+The dipole moment $\bm{\mu}$ can be defined as
+\begin{equation}
+  \bm{\mu} = \int \rho ( \mathbf { r } ) \mathbf { r } \, d ^ { 3 } \mathbf { r }
+\end{equation}
+
+where $\rho(\mathbf{r})$ can be directly given by the norm of the wavefunctions.
+However, computational resources restrict the
+programs to obtain an explicit set of wavefunctions that
+can describe the system precisely. Density functional theory,
+or simply DFT, is mainly based on energy correction
+of the multiple electron system, cannot guarantee a
+satisfying result of the wave functions, which hinders obtaining
+a correct dipole moment derived from the method
+mentioned above. But hope is not lost. Considering the electric field as a perturbation, the energy of the system can be expanded in power series of electric field $E$, namely
 \begin{equation}
 	H' = H_0' + \frac{\partial H'}{\partial E} E + \frac{1}{2} \frac{ \partial^2 H'}{\partial E^2} E^2 + o(E^2)
 	\label{expand}
 \end{equation}
-where $H_0'$ is the eigenvalue of the energy of the unperturbed system. From another perspective the dipole moment $\mathbf{\mu}$ can be defined as
-\begin{equation}
- 	\mathbf{\mu} = \int \rho(\mathbf{r}) \mathbf{r} \, d^3 \mathbf{r}
- \end{equation} 
- while the electric potential energy in a constant electric field is
+where $H_0'$ is the eigenvalue of the energy of the unperturbed system. The electric potential energy in a constant electric field is
  \begin{equation}
  	U = - \int \rho(\mathbf{r})d \tau (\mathbf{E} \cdot \mathbf{r}) = - \mathbf{\mu} \cdot \mathbf{E}
 \label{dipolepotential}
@@ -244,11 +255,149 @@ In thermodynamics, the direction of the polar molecules is governed by the outer
 \begin{equation}
 	P(\theta,\phi) d\theta d\phi = e^{-\alpha} e^{-\beta \mu E \cos{\theta}} d\theta d\phi
 \end{equation}
-where $P$ represents the distribution probability function, $alpha$ 
+where $P$ represents the distribution probability function, $\alpha$ and $\beta$ the constants. $\alpha$ can be regarded as a normalization
+coefficient, while $\beta$is equivalent to 1/kT in Boltzmann
+distribution. $\theta$ is the angle of $\mu$ deviated from the
+direction of electric field, and $\phi$ is the angle on the crosssection
+surface. Thus the observatory dipole moment is
+equal to the mean value of dipole moment over the distribution,
+\begin{equation}
+  \langle \mu \rangle = \frac { \iint \mu \cos \theta e ^ { \beta \mu E \cos \theta } d \theta d \phi } { \iint e ^ { \beta \mu E \cos \theta } d \theta d \phi } = \frac { \int \mu \cos \theta e ^ { \beta \mu E \cos \theta } d \theta } { \int e ^ { \beta \mu E \cos \theta } d \theta }
+\end{equation}
+with the consideration that the dipole moment is directed
+parallel to the electric field due to symmetry.
 
+This is an extraordinary integral. To give analytical
+result, the variable is replaced by
+\begin{equation}
+\left\{ \begin{array} { l } { z = e ^ { i \theta } } \\ { \cos \theta = \frac { z + z ^ { - 1 } } { 2 } } \\ { d \theta = i e ^ { - i \theta } d z = \frac { i d z } { z } } \end{array} \right.
+\end{equation}
+thus
+\begin{equation}
+\begin{aligned} 
+e ^ { \beta \mu E \cos \theta } & = e ^ { \beta \mu E \left( z + z ^ { - 1 } \right) / 2 } \\ 
+& = \sum _ { n = 0 } ^ { \infty } \frac { ( \beta \mu E ) ^ { n } \left( z + z ^ { - 1 } \right) ^ { n } } { 2 ^ { n } n ! } 
+\end{aligned}
+\end{equation}
+The integrals are rewritten as
+\begin{equation}
+  \langle \mu \rangle = \frac { \mu \oint _ { | z | = 1 } \sum _ { n = 0 } ^ { \infty } \frac { ( \beta \mu E ) ^ { n } \left( z + z ^ { - 1 } \right) ^ { n + 1 } } { 2 ^ { n + 1 } n ! z } i d z } { \oint _ { | z | = 1 } \sum _ { n = 0 } ^ { \infty } \frac { ( \beta \mu E ) ^ { n } \left( z + z ^ { - 1 } \right) ^ { n } } { 2 ^ { n } n ! z } i d z }
+\end{equation}
+The integrals are determined by the residues in the area
+$|z| = 1$. It is easily observed that the odd point is $z = 0$,
+and the integrals are given as
+\begin{equation}
+  \langle \mu \rangle = \frac { \sum _ { n = 0 } ^ { \infty } \frac { ( \beta \mu E / 2 ) ^ { 2 n + 1 } C _ { 2 n + 2 } ^ { n + 1 } } { ( 2 n + 1 ) ! } } { \sum _ { n = 0 } ^ { \infty } \frac { ( \beta \mu E / 2 ) ^ { 2 n } C _ { 2 n } ^ { n } } { ( 2 n ) ! } } = \frac { \mu I _ { 1 } ( \beta \mu E ) } { I _ { 0 } ( \beta \mu E ) }
+  \label{total}
+\end{equation}
+where $I_n(z)$ represents the BesselI function, which is the
+solution for the differential equation
+\begin{equation}
+  z ^ { 2 } y ^ { \prime \prime } + z y ^ { \prime } - \left( z ^ { 2 } + n ^ { 2 } \right) y = 0
+\end{equation}
+Expanding (\ref{total}) in power series of $\mu$, we obtain
+\begin{equation}
+  \langle \mu \rangle = \frac { 1 } { 2 } \beta \mu ^ { 2 } E - \frac { 1 } { 16 } \mu ^ { 4 } \left( \beta ^ { 3 } E ^ { 3 } \right) + \frac { 1 } { 96 } \beta ^ { 5 } \mu ^ { 6 } E ^ { 5 } + o \left( \mu ^ { 7 } \right)
+\end{equation}
+Taking the first term, we get
+\begin{equation}
+  \langle \mu \rangle = \frac { \mu ^ { 2 } E } { 2 k T }
+\end{equation}
+which can be interpreted as the polarization of the system
+inducted by the electric field. 
 
+For a system involving no mutual interaction, the molar polarizability can be given as
+\begin{equation}
+ P =  \frac{\varepsilon - 1}{\varepsilon+2}\frac{M}{\rho}
+\end{equation}
+where $M$ represents the molar mass, $\rho$ the density of a substance. For very dilute solution, we can assume that the mutual interaction is very low. Considering that the dielectric constant as well as the density of the solution is linearly perturbed by the molar ratio of the solute, 
+\begin{equation}
+  \begin{cases}
+  \varepsilon=\varepsilon_1 ( 1+ \phi x_2)\\
+  \rho = \rho_1 ( 1 + \psi x_2)
+  \end{cases}
+\end{equation}
+where $\varepsilon,\rho$ stand for the dielectric constant and the denisty of the solution, and $\varepsilon_1, \rho_1$ for those of the solvent, and $x_2$ the molar ratio of the solute. Thus we have the molar polarizability of the solute in the infinite dilute solution
+\begin{equation}
+  P_2^\infty = \frac{3\phi\varepsilon_1}{(\varepsilon_1+2)^2}\frac{M_1}{\rho_1} + \frac{\varepsilon_1-1}{\varepsilon_1+2}\frac{M_2 - \psi M_1}{\rho_1}
+\end{equation}
+In a electric field of high frequency, the dielectric constant of a transparent substance is determined by, neglecting difference of magnetic permeability,
+\begin{equation}
+  \varepsilon = n^2
+\end{equation}
+where $n$ is the refraction index. Thus
+\begin{equation}
+  R_2^\infty = \frac{6 n_1^2 M_1 \gamma}{(n_1 +2)^2 \rho_1} + \frac{n_1^2-1}{n_1^2+2} \frac{M_2 - \psi M_1}{\rho_1}
+  \end{equation}
+  where $\gamma$ is the correction of first order of the refraction rate in series of molar ratio of solute. 
+  Assuming that the polarizability caused by eternal dipole moment does not contribute in a electric field of high frequency, we get
+  \begin{equation}
+    \mu/\mathrm{deb} = \frac{3}{2} \sqrt{\frac{k}{\pi N_A}} \sqrt{(P_2^\infty - R_2 ^ \infty )T} \times 10^{18}
+  \end{equation}
 
+  \section{Methods and Procedures}
+  A series of different molar ratio of ethyl acetate - cyclohexane solutions are obtained through weight measuring, each of which is subjected to refraction rate measurement using Abbe refractometer thermo-stabilized at 25 \celsius. The density is measured using density bottle. The dielectric constant is measured using small capacitance meter.
 
+  \section{Results and Analysis}
 
+\begin{table}
+\caption{Physical constants measured of ethyl acetate - cyclohexane solutions in different molar ratio of ethyl acetate}
+\resizebox{0.5\textwidth}{!}{
+\begin{tabular}{c|cccccc}\hline
+$x$ & 0 & 0.0522283 & 0.104286 & 0.159063 & 0.208204 &
+   0.291448 \\
+$n$ & 1.4234 & 1.4199 & 1.4164 & 1.4127 & 1.4097 & 1.4047
+   \\
+$\rho/\mathrm{kg/m^3}$  & 868.116 & 870.102 & 872.576 & 874.769 & 876.701 &
+   881.51 \\
+$\varepsilon$ & 1.6327 & 1.78344 & 1.91083 & 2.03397 & 2.08068 &
+   2.31847 \\\hline
+\end{tabular}
+}
+\label{data}
+\end{table}
+Data obtained is shown in Table.\ref{data}. The fitting result is 
+\begin{equation}
+\begin{cases}
+\rho =  45.2279 x+867.817 & R^2 = 0.993958 \\
+n =  1.42322\, - 0.0644092 x & R^2 = 0.999163 \\
+\varepsilon =  2.33502 x+1.71614 & R^2 = 0.988258 \\
+ \end{cases}
+\end{equation}
+which leads to 
+\begin{equation}
+  \begin{cases}
+ P_2 ^\infty =  6.96051 \times 10^{-5} \,\mathrm{m^3/mol}\\
+ R_2 ^\infty = 2.36925 \times 10^{-5} \,\mathrm{m^3/mol} 
+  \end{cases}
+\end{equation}
+thus 
+\begin{equation}
+  \mu = 1.50 \, \mathrm{D}
+\end{equation}
+\begin{table}
+\centering
+\caption{Result of calculation for ethyl acetate, where `N/A' represents the failure to obtain stable structure.}
+\begin{tabular}{c|cccc}\hline
+\multicolumn{5}{c}{dipole moment}\\\hline
+ & \multicolumn{2}{c}{gas} & \multicolumn{2}{c}{solution}  \\\hline
+Structure & trans & cis & trans & cis \\
+B3LYP & 2.106818 & 4.625914 & 2.34267 & 5.221142 \\
+M06 & 2.071554 & 4.495996 & N/A & N/A \\
+M06-2X & 2.058394 & 4.648344 & 2.285849 & 5.225078 \\\hline
+\multicolumn{5}{c}{Polarizability}\\\hline
+B3LYP & 59.44233 & 59.77567 & 65.79000 & 66.23267 \\
+M06 & 58.56267 & 58.86867 & N/A & N/A \\
+M06-2X & 57.36500 & 57.62100 & 63.41333 & 63.76300 \\\hline
+\end{tabular}
+\label{calc}
+\end{table}
+which is smaller than that from the reference (1.78 D).
 
+The deviation arises from several factors, including measurement errors that exist in the method, as can be seen from the mismatches of the data for pure cyclohexane. Several approximations for the deduction of the relation between dipole moment and external electric field are also responsible for the deficiency, as is given in the Introduction section. Further, some assumptions are still questionable, including the validity of linear perturbation between physical constants and molar ratio, as well as the neglected margin effect of the capacitance. Thermostats may also fail to provide stabilized temperature due to non-zero gradient of temperature that can not be eliminated, as is discussed in former reports.
+
+Calculation by Gaussian 16 is concluded in Table.\ref{calc}. The calculated dipole moment is much larger than that from the reference, which might be attributed to neglect of thermodynamic distribution. The vibrations of the bonds as well as interactions of ethyl acetate with solvents will result in a distributed occupation of energy states, each of which contributes differently to the dipole moment. Also the fact that density functional theory methods are still unable to give chemical accuracy still cast shades on the credibility of the result. Derivations of dipole moment in computational chemistry is based on energy perspective, while experimental dipole moment is defined from charge distribution - such a difference might also result in the inconsistency of the results.
+
+\section{Conclusion}
+Starting from derivations of the relation between dipole moment and electric field, the dipole moment of ethyl acetate is investigated from both experimental and computational methods, which fail to provide consistent result with the reference. Main reasons include the unsatisfying approxmations and assumptions in the experimental method and neglect of thermodynamic effect in computational method.
 \end{document}
