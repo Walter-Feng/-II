@@ -1,0 +1,11 @@
+\contentsline {title}{Approximation of viscosity average molecular weight of polyethlene glycol}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}The fluctuation of temperature in thermostat}{1}{}
+\contentsline {subsection}{\numberline {A}Simulations}{1}{}
+\contentsline {subsection}{\numberline {B}Experimental Results}{2}{}
+\contentsline {section}{\numberline {II}The measurement of viscosity of polymer's solution, and approxmation of polymer's molecular weight}{3}{}
+\contentsline {section}{\numberline {III}Acknowledgements}{3}{}
+\contentsline {section}{\numberline {}References}{3}{}
