@@ -145,7 +145,7 @@ language=Mathematica,
 
 %\preprint{APS/123-QED}
 
-\title{The measurement of dipole moment of ethyl acetate}% Force line breaks with \\
+\title{Measurement of dipole moment of ethyl acetate}% Force line breaks with \\
 %\thanks{A footnote to the article title}% give thanks
 
 \author{Rui Li}
@@ -193,7 +193,6 @@ The dipole moment $\bm{\mu}$ can be defined as
 \begin{equation}
   \bm{\mu} = \int \rho ( \mathbf { r } ) \mathbf { r } \, d ^ { 3 } \mathbf { r }
 \end{equation}
-
 where $\rho(\mathbf{r})$ can be directly given by the norm of the wavefunctions.
 However, computational resources restrict the
 programs to obtain an explicit set of wavefunctions that
@@ -209,16 +208,16 @@ mentioned above. But hope is not lost. Considering the electric field as a pertu
 \end{equation}
 where $H_0'$ is the eigenvalue of the energy of the unperturbed system. The electric potential energy in a constant electric field is
  \begin{equation}
- 	U = - \int \rho(\mathbf{r})d \tau (\mathbf{E} \cdot \mathbf{r}) = - \mathbf{\mu} \cdot \mathbf{E}
+ 	U = - \int \rho(\mathbf{r})d \tau (\mathbf{E} \cdot \mathbf{r}) = - \bm{\mu} \cdot \mathbf{E}
 \label{dipolepotential}
  \end{equation}
  When the electric field is in the same direction as the dipole moment, it can be found that 
  \begin{equation}
- 	\frac{\partial H'}{\partial E} = - \mu
+ 	\frac{\partial H'}{\partial E} = - \bm{\mu}
  \end{equation}
- For a isotropic system polarizde by a constant electric field, the induced dipole moment is approximately proportional to the electric field, namely
+ For a isotropic system polarized by a constant electric field, the induced dipole moment is approximately proportional to the electric field, namely
  \begin{equation}
- 	\mathbf{p}_\text{ind} = \alpha \mathbf{E}
+ 	\mu_\text{ind} = \alpha \mathbf{E}
  \end{equation}
  where $\alpha$ is defined as polarizability. For a anisotropic system, the polarizability should be defined as a two-dimensional tensor,
  \begin{equation}
@@ -253,20 +252,14 @@ where $H_0'$ is the eigenvalue of the energy of the unperturbed system. The elec
 
 In thermodynamics, the direction of the polar molecules is governed by the outer electric field. The direction follows the Boltzmann distribution, namely
 \begin{equation}
-	P(\theta,\phi) d\theta d\phi = e^{-\alpha} e^{-\beta \mu E \cos{\theta}} d\theta d\phi
+	P(\theta,\phi) d\theta d\phi = e^{-\alpha} e^{\beta \mu E \cos{\theta}} d\theta d\phi
 \end{equation}
-where $P$ represents the distribution probability function, $\alpha$ and $\beta$ the constants. $\alpha$ can be regarded as a normalization
-coefficient, while $\beta$is equivalent to 1/kT in Boltzmann
-distribution. $\theta$ is the angle of $\mu$ deviated from the
-direction of electric field, and $\phi$ is the angle on the crosssection
-surface. Thus the observatory dipole moment is
-equal to the mean value of dipole moment over the distribution,
+where $P$ represents the distribution probability function, $\alpha$ and $\beta$ the constants. $\alpha$ can be regarded as a normalization coefficient, while $\beta$ is equivalent to $1/kT$ in Boltzmann distribution. $\theta$ is the angle of $\mu$ deviated from the direction of electric field, and $\phi$ is the angle on the cross-section surface. Thus the observatory dipole moment is equal to the mean value of dipole moment over the distribution, 
 \begin{equation}
-  \langle \mu \rangle = \frac { \iint \mu \cos \theta e ^ { \beta \mu E \cos \theta } d \theta d \phi } { \iint e ^ { \beta \mu E \cos \theta } d \theta d \phi } = \frac { \int \mu \cos \theta e ^ { \beta \mu E \cos \theta } d \theta } { \int e ^ { \beta \mu E \cos \theta } d \theta }
-\end{equation}
-with the consideration that the dipole moment is directed
-parallel to the electric field due to symmetry.
-
+   \langle  \mu \rangle =
+   \frac{\iint \mu \cos{\theta} \, e^{\beta \mu E \cos{\theta}} d\theta d\phi}{\iint e^{\beta \mu E \cos{\theta}} d\theta d\phi} = \frac{\int \mu \cos{\theta} \, e^{\beta \mu E \cos{\theta}} d\theta}{\int e^{\beta \mu E \cos{\theta}} d\theta}
+ \end{equation} 
+ with the consideration that the dipole moment is directed parallel to the electric field due to symmetry. 
 This is an extraordinary integral. To give analytical
 result, the variable is replaced by
 \begin{equation}
@@ -304,7 +297,7 @@ Taking the first term, we get
   \langle \mu \rangle = \frac { \mu ^ { 2 } E } { 2 k T }
 \end{equation}
 which can be interpreted as the polarization of the system
-inducted by the electric field. 
+induced by the electric field. 
 
 For a system involving no mutual interaction, the molar polarizability can be given as
 \begin{equation}

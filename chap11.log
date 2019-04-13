@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  2 JAN 2019 14:08
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2017.4.20)  12 APR 2019 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1926,17 +1926,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 192.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 3803) in paragraph at lines 254--255
+Underfull \hbox (badness 3803) in paragraph at lines 253--254
 []\TU/lmr/m/n/10 In thermodynamics, the direction of the polar
  []
 
 [1]
-Overfull \hbox (9.0093pt too wide) in paragraph at lines 345--358
+Overfull \hbox (9.0093pt too wide) in paragraph at lines 338--351
  [][] 
  []
 
 [2] (./chap11.bbl)
-Underfull \hbox (badness 1052) in paragraph at lines 402--403
+Underfull \hbox (badness 1052) in paragraph at lines 395--396
 []\TU/lmr/m/n/10 Starting from derivations of the relation between
  []
 
@@ -1950,4 +1950,4 @@ Here is how much of TeX's memory you used:
  1347 hyphenation exceptions out of 8191
  62i,10n,67p,10434b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chap11.xdv (3 pages, 82704 bytes).
+Output written on chap11.xdv (3 pages, 82652 bytes).
